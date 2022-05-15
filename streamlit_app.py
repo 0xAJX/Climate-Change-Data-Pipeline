@@ -20,4 +20,4 @@ if df is None:
     raise Exception("Issue with reading file")
 
 df.set_index('year', inplace=True)
-st.area_chart(df)
+st.line_chart(df)
