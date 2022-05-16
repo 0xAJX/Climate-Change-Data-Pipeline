@@ -21,7 +21,7 @@ if df is None:
 
 df.set_index('Year', inplace=True)
 
-col1, col2 = st.columns([4, 2])
+col1, col2 = st.columns([10, 2])
 
 col1.subheader("Average Temperature Based On Year For India")
 st.line_chart(df)
