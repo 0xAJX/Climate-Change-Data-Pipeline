@@ -21,10 +21,10 @@ if df is None:
 
 df.set_index('Year', inplace=True)
 
-col1, col2 = st.columns([10, 2])
+container1 = st.container()
+container1.write("Average Temperature Based On Year For India")
+container1.line_chart(df)
 
-col1.subheader("Average Temperature Based On Year For India")
-st.line_chart(df)
-
-col2.subheader("Sneak Peek to Data")
-col2.write(udf)
+container2 = st.container()
+container2.subheader("Sneak Peek to Data")
+container2.write(udf)
