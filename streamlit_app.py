@@ -1,12 +1,10 @@
 import re
 from os import listdir
 from os.path import isfile, join
-import numpy as np
 import streamlit as st
 import pandas as pd
-import datetime
 
-st.write("Average Temperature Based On Year For India")
+st.write("Climate Change")
 working_directory = "ClimateChangeModified"
 files = [f for f in listdir(working_directory) if isfile(join(working_directory, f))]
 
@@ -21,7 +19,10 @@ if df is None:
 
 df.set_index('year', inplace=True)
 
-col1 = st.columns(1)
+col1, col2 = st.columns([3, 1])
 
-with col1:
-    st.line_chart(df)
+col1.subheader("Average Temperature Based On Year For India")
+st.line_chart(df)
+
+col2.subheader("Sneak Peek to Data")
+col2.write(df)
