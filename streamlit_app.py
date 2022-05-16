@@ -12,7 +12,7 @@ df = None
 
 for f in files:
     if re.search(".csv$", f):
-        df = pd.read_csv(working_directory + "/" + f, header=["year", "averagetemperature"])
+        df = pd.read_csv(working_directory + "/" + f, header=["1", "2"])
 
 if df is None:
     raise Exception("Issue with reading file")
