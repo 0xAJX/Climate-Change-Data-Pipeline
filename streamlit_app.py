@@ -4,7 +4,7 @@ from os.path import isfile, join
 import streamlit as st
 import pandas as pd
 
-st.write("Climate Change")
+st.header("Climate Change")
 working_directory = "ClimateChangeModified"
 files = [f for f in listdir(working_directory) if isfile(join(working_directory, f))]
 
@@ -26,5 +26,5 @@ container1.write("Average Temperature Based On Year For India")
 container1.line_chart(df)
 
 container2 = st.container()
-container2.subheader("Sneak Peek to Data")
+container2.write("Sneak Peek to Data")
 container2.write(udf)
