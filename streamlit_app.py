@@ -3,6 +3,7 @@ from os import listdir
 from os.path import isfile, join
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 st.header("Climate Change")
 working_directory = "ClimateChangeModified"
@@ -37,4 +38,5 @@ container2.write(india_df)
 
 container3 = st.container()
 container3.write("Average Temperature Based On Year For Indian Cities")
-container3.line_chart(cities_df("Date")["Average Temperature"])
+fig = px.line(cities_df, x='Date', y=cities_df.columns[1:])
+st.plotly_chart(fig, use_container_width=True)
