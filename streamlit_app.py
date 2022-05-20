@@ -37,4 +37,4 @@ container2.write(india_df)
 
 container3 = st.container()
 container3.write("Average Temperature Based On Year For Indian Cities")
-container3.line_chart(cities_df)
+container3.line_chart(cities_df("Date")["Average Temperature"])
