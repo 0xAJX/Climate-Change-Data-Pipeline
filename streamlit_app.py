@@ -3,7 +3,7 @@ from os import listdir
 from os.path import isfile, join
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+import plotly.figure_factory as px
 
 st.header("Climate Change")
 working_directory = "ClimateChangeModified"
