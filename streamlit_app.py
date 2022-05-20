@@ -22,7 +22,7 @@ if india_df is None and cities_df is None:
     raise Exception("Issue with reading file")
 
 india_df.set_index('Year', inplace=True)
-# cities_df.set_index('Date', inplace=True)
+cities_df.set_index(['Date', "City"], inplace=True)
 
 
 container1 = st.container()
