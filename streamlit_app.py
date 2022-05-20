@@ -16,13 +16,15 @@ for f in files:
 
 for f in files:
     if re.search("india-cities-grouped.csv$", f):
-        cities_df = pd.read_csv(working_directory + "/" + f, names=["City", "Date", "Average Temperature"])
+        cities_df = pd.read_csv(working_directory + "/" + f)
 
 if india_df is None and cities_df is None:
     raise Exception("Issue with reading file")
 
+cities_df = pd.DataFrame(cities_df, columns = ["City", "Date", "Average Temperature"])
+
 india_df.set_index('Year', inplace=True)
-cities_df.set_index(['Date', "Average Temperature"], inplace=True)
+# cities_df.set_index(['Date', "Average Temperature"], inplace=True)
 
 
 container1 = st.container()
