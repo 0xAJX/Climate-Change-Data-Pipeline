@@ -29,7 +29,7 @@ mumbai_df = mumbai_df[["Date", "temp"]]
 
 india_df.set_index('Year', inplace=True)
 # cities_df.set_index(['Date', "Average Temperature"], inplace=True)
-india_df.set_index('Date', inplace=True)
+mumbai_df.set_index('Date', inplace=True)
 
 container1 = st.container()
 container1.write("Average Temperature Based On Year For India")
@@ -41,5 +41,5 @@ container2.write(india_df)
 
 container3 = st.container()
 container3.write("Recent Temperature in Mumbai")
-container3.write(mumbai_df)
+container3.line_chart(mumbai_df)
 #%%
