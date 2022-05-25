@@ -41,5 +41,5 @@ container2.write(india_df)
 
 container3 = st.container()
 container3.write("Recent Temperature in Mumbai")
-container3.write(mumbai_df)
+container3.line_chart(mumbai_df)
 #%%
