@@ -44,7 +44,6 @@ container2.write(india_df)
 # container3.write("Recent Temperature in Mumbai")
 # container3.line_chart(mumbai_df)
 #%%
-c = alt.Chart(mumbai_df).mark_circle().encode(
-    x='Date', y='temp', size='c', color='c')
+c = alt.Chart(mumbai_df).mark_circle()
 
 st.altair_chart(c, use_container_width=True)
