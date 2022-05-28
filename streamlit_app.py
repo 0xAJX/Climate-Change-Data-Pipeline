@@ -40,11 +40,11 @@ container2 = st.container()
 container2.write("Sneak Peek to Data")
 container2.write(india_df)
 
-# container3 = st.container()
-# container3.write("Recent Temperature in Mumbai")
+container3 = st.container()
+container3.write("Recent Temperature in Mumbai")
 # container3.line_chart(mumbai_df)
 #%%
 c = alt.Chart(mumbai_df).mark_circle().encode(
     x='Date', y='temp', size='temp', color='temp')
 
-st.altair_chart(c, use_container_width=True)
+container3.altair_chart(c, use_container_width=True)
