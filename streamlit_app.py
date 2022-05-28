@@ -46,3 +46,5 @@ container2.write(india_df)
 #%%
 c = alt.Chart(mumbai_df).mark_circle().encode(
     x='Date', y='temp', size='c', color='c')
+
+st.altair_chart(c, use_container_width=True)
