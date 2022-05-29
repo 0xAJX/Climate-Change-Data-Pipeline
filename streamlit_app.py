@@ -20,7 +20,7 @@ for f in files:
 #         cities_df = pd.read_csv(working_directory + "/" + f)
 
 for f in files:
-    if re.search("mumbai-temperature.csv$", f):
+    if re.search("mumbai-temperature-1.csv$", f):
         mumbai_df = pd.read_csv(working_directory + "/" + f, names=["Date", "temp"])
 
 if india_df is None and mumbai_df is None:
